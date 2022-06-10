@@ -2,3 +2,42 @@
     margin: 0;
     padding: 0;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #121212;
+    color: white;
+}
+
+.all-header {
+    padding: 7px;
+}
+
+.logo, .main-menu {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+}
+
+.main-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.logo h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 30px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+body {
+    background-color: #1f1f1f;
+}
+
