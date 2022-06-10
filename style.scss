@@ -1,0 +1,60 @@
+$header-color: #121212;
+$body-color: #1f1f1f;
+
+$logo-font: 'Kanit', sans-serif;
+$item-font: 'Quicksand', sans-serif;
+
+%message {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: $header-color;
+    color: white;
+}
+
+.all-header {
+    padding: 7px;
+}
+
+.logo {
+    @extend %message;
+
+    h1 {
+        font-family: $logo-font;
+        font-size: 30px;
+    }
+}
+
+.main-menu {
+    @extend %message;
+
+    li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: $item-font;
+        font-size: 18px;
+        color: white;
+    }
+
+    a:hover {
+        color: #8c8b8b;
+    }
+}
+
+body {
+    background-color: $body-color;
+}
