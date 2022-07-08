@@ -1,7 +1,9 @@
-.main-menu, .logo {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 25px;
+.right-side a, .outer-list a {
+  display: block;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  color: #cdcdcd;
+  font-size: 18px;
 }
 
 * {
@@ -10,37 +12,93 @@
 }
 
 header {
+  background-color: #1b1b1b;
+  border-bottom: 1px solid #4e4e4e;
   display: flex;
   justify-content: center;
-  background-color: #121212;
-  color: white;
 }
 
-.all-header {
-  padding: 7px;
+.header-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
 }
 
+.left-side {
+  display: flex;
+}
+
+.outer-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.outer-list a {
+  padding: 15px 30px 15px 40px;
+  transition: all 0.3s ease;
+}
+.outer-list a:hover {
+  background-color: #2a2a2a;
+  box-shadow: 1px 5px 10px -5px #1b1b1b;
+  transition: all 0.3s ease;
+}
+.outer-list li {
+  position: relative;
+}
+.outer-list li:hover > .inner-list {
+  display: block;
+}
+.outer-list img {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  height: 18px;
+  width: auto;
+}
+
+.inner-list {
+  position: absolute;
+  min-width: 150px;
+  border: 1px solid #2a2a2a;
+  list-style: none;
+  display: none;
+}
+.inner-list a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.logo {
+  margin-right: 30px;
+}
 .logo h1 {
   font-family: "Kanit", sans-serif;
-  font-size: 30px;
+  font-size: 32px;
+  color: #cdcdcd;
 }
 
-.main-menu li {
-  display: inline-block;
-  margin-right: 20px;
+.right-side {
+  display: flex;
+  flex-direction: row;
 }
-.main-menu a {
-  text-decoration: none;
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  color: white;
+.right-side a {
+  padding: 15px 30px 15px 40px;
 }
-.main-menu a:hover {
-  color: #8c8b8b;
+
+.site-theme {
+  position: relative;
+}
+.site-theme img {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  height: 18px;
+  width: auto;
 }
 
 body {
-  background-color: #1f1f1f;
+  background-color: #1b1b1b;
 }
 
 /*# sourceMappingURL=style.css.map */

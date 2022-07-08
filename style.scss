@@ -1,57 +1,122 @@
-$header-color: #121212;
-$body-color: #1f1f1f;
+// VARIABLES
+$header-color: #1b1b1b;
+$body-color: #1b1b1b;
+$font-color: #cdcdcd;
+$hover-color: #2a2a2a;
+$border-color: #4e4e4e;
 
 $logo-font: 'Kanit', sans-serif;
 $item-font: 'Quicksand', sans-serif;
 
-%message {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 25px;
+// EXTEND BLOCKS
+%header-link-style {
+    display: block;
+    text-decoration: none;
+    font-family: $item-font;
+    color: $font-color;
+    font-size: 18px;
 }
 
+// STYLES
 * {
     margin: 0;
     padding: 0;
 }
 
 header {
+    background-color: $header-color;
+    border-bottom: 1px solid $border-color;
     display: flex;
     justify-content: center;
-    background-color: $header-color;
-    color: white;
 }
 
-.all-header {
-    padding: 7px;
+.header-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.logo {
-    @extend %message;
-
-    h1 {
-        font-family: $logo-font;
-        font-size: 30px;
-    }
+.left-side {
+    display: flex;
 }
 
-.main-menu {
-    @extend %message;
-
-    li {
-        display: inline-block;
-        margin-right: 20px;
-    }
+.outer-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 
     a {
-        text-decoration: none;
-        font-family: $item-font;
-        font-size: 18px;
-        color: white;
+        @extend %header-link-style;
+        padding: 15px 30px 15px 40px;
+        transition: all 0.3s ease;
     }
 
     a:hover {
-        color: #8c8b8b;
+        background-color: $hover-color;
+        box-shadow: 1px 5px 10px -5px $header-color;
+        transition: all 0.3s ease;
+    }
+
+    li {
+        position: relative;
+    }
+
+    li:hover > .inner-list {
+        display: block;
+    }
+
+    img {
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        height: 18px;
+        width: auto;
+    }
+}
+
+.inner-list {
+    position: absolute;
+    min-width: 150px;
+    border: 1px solid $hover-color;
+    list-style: none;
+    display: none;
+
+    a {
+        font-family: $item-font;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+            
+.logo {
+    margin-right: 30px;
+
+    h1 {
+        font-family: $logo-font;
+        font-size: 32px;
+        color: $font-color;
+    }
+}
+            
+.right-side {
+    display: flex;
+    flex-direction: row;
+
+    a {
+        @extend %header-link-style;
+        padding: 15px 30px 15px 40px;
+    }
+}
+    
+.site-theme {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        height: 18px;
+        width: auto;
     }
 }
 
